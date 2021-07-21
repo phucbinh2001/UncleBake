@@ -57,6 +57,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   display: flex;
+  background-color: #000;
   align-items: center;
 }
 
