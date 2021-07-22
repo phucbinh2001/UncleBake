@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/png" href="./images/logo.png" />
     <link rel="icon" type="image/png" href="./images/logo.png" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 </head>
 <style>
     @font-face {
@@ -39,11 +40,12 @@
         </div>
         <div class="row align-items-center pt-5 pb-5">
             <div class="col-md-7 col-12">
-                <div class="video">
-                    <video autoplay>
-                        <source src="./images/video.webm" type="video/webm">
-                        <source src="./images/video.ogv" type="video/ogv">
-                        <source src="./images/video.mp4" type="video/mp4">
+                <div class="video-bg video lazyloaded" data-src="/themes/cfd-training/video/CFD-video-bg2.mp4">
+                    <video autoplay="" preload="none" muted="" poster="./images/poster.jpg">
+                        <source data-src="./images/video.webm" src="./images/video.webm" type="video/webm">
+                        <source data-src="./images/video.mp4" src="./images/video.mp4" type="video/mp4">
+                        <source data-src="./images/video.ogg" src="./images/video.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
@@ -157,5 +159,9 @@
         </div>
     </div>
 </body>
+<script>
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
+</script>
 
 </html>
